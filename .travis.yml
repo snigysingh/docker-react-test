@@ -6,4 +6,4 @@ before_install:
   - docker build -t snigy/docker-react-test -f Dockerfile.dev .
 
 script:
-  - docker run snigy/docker-react-test npm run test -- --coverage
+  - docker run -e CI=true snigy/docker-react-test npm run test
